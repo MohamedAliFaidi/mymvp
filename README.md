@@ -1,3 +1,0 @@
-# Simple mern stack training 
-
-
