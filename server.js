@@ -20,7 +20,7 @@ app.use(cors());
 connectDb();
 
 //Routing
-app.post("/singup", usersController.signup);
+app.post("/signup", usersController.signup);
 
 // app.post("/login", usersController.login);
 
