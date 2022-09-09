@@ -7,6 +7,7 @@ const express = require("express");
 const cors = require("cors");
 const connectDb = require("./config/DB");
 const notesController = require("./controllers/notesController");
+const usersController = require ("./controllers/usersControllers");
 
 // create express app
 const app = express();
@@ -18,7 +19,12 @@ app.use(cors());
 //connect to database
 connectDb();
 
-// Routing
+//Routing
+app.post("/singup", usersController.signup);
+
+// app.post("/login", usersController.login);
+
+// app.post("/logout", usersController.logout);
 
 app.get("/notes", notesController.fetchNotes);
 
